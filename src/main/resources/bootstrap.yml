@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/kowshikbharathi/cloud-config-server.git
+          default-label: main
+        bootstrap: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
